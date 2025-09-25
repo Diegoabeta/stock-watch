@@ -34,8 +34,6 @@ export const LiveQuotesProvider: React.FC<PropsWithChildren> = ({ children }) =>
   const ws = useRef<WebSocket | null>(null);
   const subscriptions = useRef<Set<string>>(new Set());
 
-  console.log(quotes, "LIVE QUOTES");
-
   // Fetch initial quotes for all watchlist items
   useEffect(() => {
     const loadQuotes = async () => {
