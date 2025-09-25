@@ -1,0 +1,17 @@
+export const TopSymbols = [
+  { label: "AAPL — Apple Inc.", value: "AAPL" },
+  { label: "MSFT — Microsoft Corporation", value: "MSFT" },
+  { label: "GOOGL — Alphabet Inc.", value: "GOOGL" },
+  { label: "AMZN — Amazon.com, Inc.", value: "AMZN" },
+  { label: "FB — Meta Platforms, Inc.", value: "FB" },
+  { label: "TSLA — Tesla, Inc.", value: "TSLA" },
+  { label: "NVDA — NVIDIA Corporation", value: "NVDA" },
+  { label: "NFLX — Netflix, Inc.", value: "NFLX" },
+  { label: "INTC — Intel Corporation", value: "INTC" },
+  { label: "AMD — Advanced Micro Devices, Inc.", value: "AMD" },
+  { label: "DIS — The Walt Disney Company", value: "DIS" },
+  { label: "PYPL — PayPal Holdings, Inc.", value: "PYPL" },
+  { label: "ADBE — Adobe Inc.", value: "ADBE" },
+  { label: "CRM — Salesforce, Inc.", value: "CRM" },
+  { label: "ORCL — Oracle Corporation", value: "ORCL" },
+];
