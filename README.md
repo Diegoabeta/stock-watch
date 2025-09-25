@@ -9,6 +9,7 @@ The app supports authentication, watchlists, persistent storage, and real-time s
 
 - **Authentication with Auth0** (secure login and token handling - secures routes with expo-router guards)
 - **Charts** using React Native Gifted Charts
+- **Tabs navigation** with Expo Router
 - **Real-time stock quotes** via WebSockets (Finnhub API)
 - **Data fetching & caching** with TanStack Query
 - **Custom UI styling** with Styled Components
@@ -32,6 +33,7 @@ The app supports authentication, watchlists, persistent storage, and real-time s
 - If states get more complex or need mutation, consider using Zustand for state management
 - If local storage needs grow, consider using SQLite
 - Implement CI/CD options for automated testing and deployment
+- Upgrade to Expo SDK 53 when stable
 
 ---
 
