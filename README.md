@@ -1,6 +1,37 @@
-# Welcome to your Expo app 👋
+# 📱 Stock Watch
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Stock Watch is a mobile app built with [Expo](https://expo.dev) and React Native that helps users track and visualize stock performance.  
+The app supports authentication, watchlists, persistent storage, and real-time stock price updates.
+
+---
+
+## Features
+
+- **Authentication with Auth0** (secure login and token handling - secures routes with expo-router guards)
+- **Charts** using [React Native Gifted Charts](https://gifted-charts.web.app/)
+- **Data fetching & caching** with [TanStack Query](https://tanstack.com/query)
+- **Custom UI styling** with Styled Components
+- **Persistent storage** using:
+  - SecureStore (for Auth0 tokens)
+  - AsyncStorage (for watchlists and app data)
+- **Real-time stock quotes** via WebSockets (Finnhub API)
+- **TypeScript** for type safety and better developer experience
+- **Unit tests** with Jest
+- **ESLint & Prettier** for code quality and consistency
+
+---
+
+## Next Steps
+
+- Add more chart types and customization options
+- Expand watchlist features (e.g., sorting, filtering)
+- Consider changing dropdown for a select component with search functionality
+- Implement Firebase for remote config and secrets
+- Implement Firebase Cloud Messaging for push notifications
+- Add more unit and integration tests
+- Implement CI/CD options for automated testing and deployment
+
+---
 
 ## Get started
 
@@ -22,29 +53,3 @@ In the output, you'll find options to open the app in a
 - [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
 - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
 - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
