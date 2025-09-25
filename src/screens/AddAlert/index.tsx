@@ -17,12 +17,12 @@ import { ContentContainer, FormContainer, IconContainer } from "./styles";
 
 export const AddAlertScreen: React.FC = () => {
   const [selectedStock, setSelectedStock] = useState<string>();
-  const { data: quote, isLoading: quoteLoading } = useQuote(selectedStock);
+  const { data: quote, isLoading: quoteLoading } = useQuote(selectedStock || "");
   const [price, setPrice] = useState("");
   const [priceError, setPriceError] = useState<string | null>(null);
   const { addStock } = useWatchlistContext();
 
-  // Adds to watchlist - TODO: add push notification logic
+  // TODO: add push notification logic
   const handleSubmit = async () => {
     if (!selectedStock || !quote) return;
 
