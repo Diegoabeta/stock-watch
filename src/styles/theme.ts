@@ -10,7 +10,7 @@ export const theme = {
 
     // UI backgrounds and surfaces
     background: "#0F172A",
-    surface: "#2A2A2A",
+    surface: "#1E293B",
 
     // Text
     textPrimary: "#FFFFFF",
