@@ -8,13 +8,13 @@ The app supports authentication, watchlists, persistent storage, and real-time s
 ## Features
 
 - **Authentication with Auth0** (secure login and token handling - secures routes with expo-router guards)
-- **Charts** using [React Native Gifted Charts](https://gifted-charts.web.app/)
-- **Data fetching & caching** with [TanStack Query](https://tanstack.com/query)
+- **Charts** using React Native Gifted Charts
+- **Real-time stock quotes** via WebSockets (Finnhub API)
+- **Data fetching & caching** with TanStack Query
 - **Custom UI styling** with Styled Components
 - **Persistent storage** using:
   - SecureStore (for Auth0 tokens)
   - AsyncStorage (for watchlists and app data)
-- **Real-time stock quotes** via WebSockets (Finnhub API)
 - **TypeScript** for type safety and better developer experience
 - **Unit tests** with Jest
 - **ESLint & Prettier** for code quality and consistency
