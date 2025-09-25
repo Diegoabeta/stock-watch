@@ -1,4 +1,4 @@
-import { useQuote } from "@/src/hooks/useQuote";
+import { useLiveQuotes } from "@/src/contexts/liveQuotes";
 import { View } from "react-native";
 import { Change, Price, StyledCard, Symbol } from "./styles";
 
@@ -7,7 +7,8 @@ interface IProps {
 }
 
 export const StockCard: React.FC<IProps> = ({ symbol }) => {
-  const { data: quote, isLoading } = useQuote(symbol);
+  const { quotes, isLoading } = useLiveQuotes();
+  const quote = quotes[symbol];
 
   const changePercent = quote?.pc ? ((quote.c - quote.pc) / quote.pc) * 100 : 0;
 
