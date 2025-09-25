@@ -27,6 +27,12 @@
     "plugins": [
       "expo-router",
       [
+        "react-native-auth0",
+        {
+          "domain": "dev-r1ipakcixlqqqjf8.us.auth0.com"
+        }
+      ],
+      [
         "expo-splash-screen",
         {
           "image": "./assets/images/splash-icon.png",
