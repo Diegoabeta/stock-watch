@@ -29,6 +29,7 @@ The app supports authentication, watchlists, persistent storage, and real-time s
 - Implement Firebase for remote config and secrets
 - Implement Firebase Cloud Messaging for push notifications
 - Add more unit and integration tests
+- If states get more complex or need mutation, consider using Zustand for state management
 - Implement CI/CD options for automated testing and deployment
 
 ---
