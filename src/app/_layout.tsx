@@ -1,10 +1,13 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Stack } from "expo-router";
+import { SplashScreen, Stack } from "expo-router";
 import { PaperProvider } from "react-native-paper";
 import { AuthProvider, useAuthContext } from "../contexts/auth";
 import { LiveQuotesProvider } from "../contexts/liveQuotes";
 import { WatchlistProvider } from "../contexts/watchlist";
+import { LoadingScreen } from "../screens/Loading";
 import { SplashScreenController } from "../screens/Splash";
+
+SplashScreen.preventAutoHideAsync();
 
 const queryClient = new QueryClient();
 
@@ -28,7 +31,7 @@ export default function RootLayout() {
 function InnerLayout() {
   const { accessToken, isLoading } = useAuthContext();
 
-  if (isLoading) return null;
+  if (isLoading) return <LoadingScreen />;
 
   return (
     <Stack>

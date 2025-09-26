@@ -55,19 +55,26 @@ export const AuthProvider: React.FC<PropsWithChildren> = ({ children }) => {
   }, []);
 
   const login = async () => {
-    const result = await AuthService.login();
+    try {
+      setIsLoading(true);
+      const result = await AuthService.login();
 
-    if (result.data) {
-      const { accessToken, user } = result.data;
-      setAccessToken(accessToken);
-      setUser(user);
-      try {
-        await SecureStore.setItemAsync("auth", JSON.stringify(result.data));
-      } catch (error) {
-        console.log("Failed to save auth session to SecureStore", error);
+      if (result.data) {
+        const { accessToken, user } = result.data;
+        setAccessToken(accessToken);
+        setUser(user);
+        try {
+          await SecureStore.setItemAsync("auth", JSON.stringify(result.data));
+        } catch (error) {
+          console.log("Failed to save auth session to SecureStore", error);
+        }
+      } else if (result.error) {
+        Alert.alert(result.error);
       }
-    } else if (result.error) {
-      Alert.alert(result.error);
+    } catch (err) {
+      console.error("Unexpected login error", err);
+    } finally {
+      setIsLoading(false);
     }
   };
 
