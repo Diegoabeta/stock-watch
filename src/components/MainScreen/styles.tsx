@@ -11,5 +11,5 @@ export const Title = styled.Text`
   font-size: ${theme.fontSize.xl};
   font-weight: bold;
   color: ${theme.colors.textPrimary};
-  margin: 10px auto;
+  align-self: center;
 `;
